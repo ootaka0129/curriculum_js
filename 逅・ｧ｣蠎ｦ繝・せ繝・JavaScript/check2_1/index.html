@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToDoリストアプリ</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .todo-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .todo-item {
+        margin-bottom: 5px;
+    }
+    .todo-item button {
+        margin-left: 10px;
+        padding: 2px 6px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <script src="main.js"></script>
+    <h1>ToDoリスト</h1>
+    <input type="text" id="todoInput" placeholder="ToDoを入力してください">
+    <button id="addTodoBtn">追加</button>
+    <ul id="todoList" class="todo-list">
+        <!-- ToDoアイテムがここに追加されます -->
+    </ul>
+</body>
+</html>
