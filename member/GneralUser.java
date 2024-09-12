@@ -1,8 +1,11 @@
 package member;
 
 public class GeneralUser extends User {
-    //初期化
-    public 
+    
+    public GeneralUser(String name, String mail) {
+        super(name, mail);
+        }
+    
     
     @Override
     public String toString() {

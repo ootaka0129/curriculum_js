@@ -42,16 +42,36 @@ public class Main {
     }
 
     // 一般ユーザーを登録するメソッド(名前とメール）
-    public static void registerGeneralUser(Scanner scanner) {
+    public static void registerGeneralUser(Scanner s) {
+        System.out.println("ユーザ名を入力してください");
+        String name = s.nextLine();
+        System.out.println("メールアドレスを入力してください");
+        String mail = s.nextLine();
+        
+        User newUser = new User(name,mail);
+        users.add(newUser);
+        
+        System.out.println("登録完了");
         
     }
     // 管理者ユーザーを登録するメソッド(名前とメールと管理者コード)
-    public static void registerAdminUser(Scanner scanner) {
+    public static void registerAdminUser(Scanner s) {
+        System.out.println("管理者名を入力してください");
+        String name = s.nextLine();
+        System.out.println("メールアドレスを入力してください");
+        String mail = s.nextLine();
+        System.out.println("管理者コードを入力してください");
+        String adminCode = s.nextLine();
         
-    }
+        AdminUser newAdminUser = new AdminUser(name, mail, adminCode);
+        users.add(newAdminUser);
+        
+        System.out.println("登録完了");
+        }
+    
     // メールアドレスが既に登録されているか確認するメソッド
     public static void isEmailRegistered() {
-        
+        if(users)
     }
     // 登録されたユーザーを表示するメソッド
     public static void findUsers() {
@@ -60,5 +80,6 @@ public class Main {
     
     
 }
+
 
 
