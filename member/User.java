@@ -11,7 +11,7 @@ public class User {
         this.mail = mail;
     }
     
-    public String getEmail() {
+    public String getMail() {
         return mail;
     }
     
@@ -23,6 +23,7 @@ public class User {
     public String toString() {
         return "ユーザー名：" + name + "　メールアドレス：" + mail;
     }
+
     
     // ここまで
 }

@@ -4,8 +4,8 @@ public class AdminUser extends User {
     
     private String adminCode;
     
-    public AdminUser(String name, String mail, String adminCode){
-        super(name, mail);
+    public AdminUser(String name, String mail, String adminCode){ //管理者のコンストラクタ
+        super(name, mail);                                        //superで親クラスのコンストラクタを呼びだす
         this.adminCode = adminCode;
     }
     
