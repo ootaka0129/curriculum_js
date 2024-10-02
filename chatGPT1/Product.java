@@ -31,8 +31,11 @@ public class Product {
     }
 
     // 商品を追加するメソッド
-    public void addProduct(Product product){
-        productList.add(Product);
+    public static void addProduct(String newName, int newPrice, int newStock){
+        Product newProduct = new Product(newName, newPrice, newStock);
+        Inventory.productList.add(newProduct);
+        System.out.println("商品が追加されました。");
     }
 
 }
+
