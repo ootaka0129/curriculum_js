@@ -21,9 +21,9 @@ public class User {
     
     @Override
     public String toString() {
-        return "ユーザー名：" + name + "　メールアドレス：" + mail;
+        return "ユーザー名：" + getName() + "　メールアドレス：" + getMail();
     }
-
+    //privateで外部からアクセスすることができない。そのため、getを通してしかname、mailの情報を取得できない。
     
     // ここまで
 }

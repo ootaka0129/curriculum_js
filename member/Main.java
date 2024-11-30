@@ -41,6 +41,13 @@ public class Main {
         scanner.close();
     }
 
+    //users=リストの変数  user=for拡張文の変数
+    
+    //インスタンス化＝設計図でつくられたもの
+    //クラス＝設計図
+    //コンストラクタ＝組み立て手順
+    //引数＝材料
+
     // 一般ユーザーを登録するメソッド(名前とメール）
     public static void registerGeneralUser(Scanner s) {
         System.out.println("ユーザ名を入力してください");
@@ -53,9 +60,8 @@ public class Main {
             System.out.println("メールアドレスが重複しています");
             return;
         }
-        
-        User newUser = new User(name,mail);
-        users.add(newUser);
+        User newUser = new GeneralUser(name,mail); //一般ユーザーのインスタンス化
+        users.add(newUser);//usersリストに一般ユーザーの名前とメールアドレスを追加する
         
         System.out.println("登録完了");
     }
@@ -69,14 +75,14 @@ public class Main {
         System.out.println("管理者コードを入力してください");
         String adminCode = s.nextLine();
 
-        boolean duplicate = isEmailRegistered(adminCode);
+        boolean duplicate = isEmailRegistered(mail);
         if(duplicate == true){
             System.out.println("管理者コードが重複しています");
             return;
         }
         
-        AdminUser newAdminUser = new AdminUser(name, mail, adminCode);
-        users.add(newAdminUser);
+        AdminUser newAdminUser = new AdminUser(name, mail, adminCode); //管理者ユーザーのインスタンス化
+        users.add(newAdminUser);//userリストに管理者ユーザーのメールアドレス、名前、管理者コードを追加する
         
         System.out.println("登録完了");
         }
@@ -95,7 +101,7 @@ public class Main {
         for(User user: users){
             System.out.println(user);
         }
-    
+    }
     
 }
 

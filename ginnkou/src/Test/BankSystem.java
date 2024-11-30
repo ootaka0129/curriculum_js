@@ -62,9 +62,9 @@ public class BankSystem {
 			} catch (NullPointerException e) { //値が何もないときに発生するエラー
 				System.out.println("エラーが発生しました。もう一度初めから操作を行ってください");				
 			} catch (BankException e) {
-				e.printStackTrace();  //printStackTrace()エラーの内容を出力する
+				e.printStackTrace();  //printStackTrace()エラーの内容を全て出力する
 				System.out.println("エラーが発生しました。もう一度初めから操作を行ってください");
-			} finally {
+			} finally {   //最後に処理する
 				System.out.println();
 			}
 		}

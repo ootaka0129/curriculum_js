@@ -12,6 +12,6 @@ public class AdminUser extends User {
     
     @Override
     public String toString(){
-        return "管理者名：" + name + "　メールアドレス：" + mail + "　管理者コード：" + adminCode;
+        return "管理者名：" + getName() + "　メールアドレス：" + getMail() + "　管理者コード：" + getAdminCode();
     }
 }
